@@ -13,6 +13,7 @@ res = []
 random.seed(11)
 proc = 1
 procesos = 25
+inst = 3
 
 
 #Se hacen funciones para cada parte del proceso
@@ -41,7 +42,7 @@ def running(env, nom, capRAM, res, memoria, inicio):
     destino = random.randint(1,2)
     #Se hace el proceso hasta que no queden instrucciones
     while terminated == False:
-        instrucciones = instrucciones - 3
+        instrucciones = instrucciones - inst
         yield env.timeout(1)
 
         if instrucciones > 2:
@@ -82,3 +83,4 @@ desv = statistics.stdev(res)
 
 print ("El tiempo promedio por proceso es: %s" %(prom))
 print ("La desviación estandar es: %s"%(desv))
+
