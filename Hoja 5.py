@@ -54,7 +54,7 @@ def running(env, nom, capRAM, res, memoria, inicio):
 
     #Se termina el proceso
 
-    print("Proceso %s ha sido terminado en %d" %(nom, env.now))    
+    print("Proceso %s ha terminado en %d" %(nom, env.now))    
     capRAM.put(memoria)
     end = env.now
     tiempo = end - inicio
